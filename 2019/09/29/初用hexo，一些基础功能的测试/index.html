@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://alfred767569085.github.io/2019/09/29/初用hexo，一些基础功能的测试/%5Cimages%5Cpasted-3.png%5C">
 <meta property="og:image" content="https://alfred767569085.github.io/2019/09/29/初用hexo，一些基础功能的测试/%5Cimages%5Cpasted-2.png">
 <meta property="og:image" content="https://alfred767569085.github.io/images/pasted-4.png">
-<meta property="og:updated_time" content="2019-09-30T10:44:08.095Z">
+<meta property="og:updated_time" content="2019-09-30T11:27:45.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些测试">
 <meta name="twitter:description" content="前几天刚刚用hexo搭建了个人博客，想记录下本菜鸡从秋招开始自己学习的过程，因为对前端基本没有了解，使用hexo-admin的过程中也踩了不少坑。 折叠测试">
@@ -188,7 +188,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![upload successful](\images\pasted-2.png)</span><br><span class="line">//去掉路径开头和结尾的&apos;\&apos;</span><br><span class="line">//在hexo-admin编辑器和博客首页可以正常显示</span><br></pre></td></tr></table></figure>
 
 <p><img src="%5Cimages%5Cpasted-2.png" alt="upload successful"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![upload successful](\images\pasted-4.png)</span><br><span class="line">//能正常显示的图片路径格式</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![upload successful](/images/pasted-4.png)</span><br><span class="line">//能正常显示的图片路径格式</span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/pasted-4.png" alt="upload successful"></p>
 <p>阅读了hexo-admin的Readme后，发现好像没有提供修改图片链接格式的接口，所以姑且每次复制完图片后只能手动修改链接。</p>
@@ -420,6 +420,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
               </li>
              
@@ -429,10 +433,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">《C++标准程序库》</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
