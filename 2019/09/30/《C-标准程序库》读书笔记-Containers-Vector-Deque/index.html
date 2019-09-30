@@ -8,15 +8,18 @@
   <link rel="dns-prefetch" href="https://alfred767569085.github.io">
   <title>《C++标准程序库》读书笔记_Containers_Vector/Deque | Blog of a rookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="STL,《C++标准程序库》">
+  <meta name="description" content="vector/deque的能力 支持常数时间随机存取 random access iterator，适用于所有algorithm 尾端/双端增删元素性能优秀 其余部分增删元素性能较差（需要移动变动位置后的每个元素）">
+<meta name="keywords" content="STL,《C++标准程序库》">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《C++标准程序库》读书笔记_Containers_Vector&#x2F;Deque">
 <meta property="og:url" content="https://alfred767569085.github.io/2019/09/30/《C-标准程序库》读书笔记-Containers-Vector-Deque/index.html">
 <meta property="og:site_name" content="Blog of a rookie">
+<meta property="og:description" content="vector/deque的能力 支持常数时间随机存取 random access iterator，适用于所有algorithm 尾端/双端增删元素性能优秀 其余部分增删元素性能较差（需要移动变动位置后的每个元素）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-30T11:25:11.996Z">
+<meta property="og:updated_time" content="2019-09-30T16:49:54.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《C++标准程序库》读书笔记_Containers_Vector&#x2F;Deque">
+<meta name="twitter:description" content="vector/deque的能力 支持常数时间随机存取 random access iterator，适用于所有algorithm 尾端/双端增删元素性能优秀 其余部分增删元素性能较差（需要移动变动位置后的每个元素）">
   
     <link rel="alternative" href="/atom.xml" title="Blog of a rookie" type="application/atom+xml">
   
@@ -168,8 +171,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <h3 id="vector-deque的能力"><a href="#vector-deque的能力" class="headerlink" title="vector/deque的能力"></a>vector/deque的能力</h3><ol>
+<li>支持常数时间随机存取</li>
+<li>random access iterator，适用于所有algorithm</li>
+<li>尾端/双端增删元素性能优秀</li>
+<li>其余部分增删元素性能较差（需要移动变动位置后的每个元素）</li>
+</ol>
+<a id="more"></a>
 
+<h3 id="vector和deque的区别"><a href="#vector和deque的区别" class="headerlink" title="vector和deque的区别"></a>vector和deque的区别</h3><ol>
+<li><p>内存模型</p>
+<ul>
+<li>vector保证元素连续存储，可当做首地址为 &amp;v[0] 的动态数组，可以使用普通指针做iterator</li>
+<li>deque为一组独立区块，必须用智能指针做iterator</li>
+</ul>
+</li>
+<li><p>功能</p>
+<ul>
+<li>deque支持push_front()和pop_front()</li>
+<li>deque的随机存取较vector稍慢一些</li>
+<li>deque在内存重分配时不必复制所有元素，无法控制内存分配时机。当某内存区块不使用时会被自动释放；vector不会。因此，deque没有capacity()和reserve()函数</li>
+</ul>
+</li>
+<li><p>关于insert()和erase()</p>
+<ul>
+<li>对于vector，erase()和不引起内存重分配的insert()只影响删除/插入位置之后元素的指针、引用、iterator；而若内存重新分配，所有元素的指针、引用、iterator会失效。</li>
+<li>对于deque，在头部和尾部插入元素后，原有元素的指针、引用依旧有效，iterator失效；其余情况下，所有元素的指针、引用、iterator都失效。</li>
+</ul>
+</li>
+</ol>
+<h3 id="关于vector的size-和capacity"><a href="#关于vector的size-和capacity" class="headerlink" title="关于vector的size()和capacity()"></a>关于vector的size()和capacity()</h3><ol>
+<li>size()返回当前元素数量，即不越界的最大下标+1</li>
+<li>capacity()返回当前分配的空间所能容纳的最大元素数量</li>
+</ol>
+<h3 id="关于vector的resize-和reserve-以及缩减容量"><a href="#关于vector的resize-和reserve-以及缩减容量" class="headerlink" title="关于vector的resize()和reserve()以及缩减容量"></a>关于vector的resize()和reserve()以及缩减容量</h3><ol>
+<li>resize()可以调大或调小vector的size()。若size()增大，多出来的元素用默认构造函数构造；若指定resize(num,elem)，则用elem值构造。resize()超过capacity()时会引起内存重新分配</li>
+<li>reserve()不能缩小vector()的容量</li>
+<li>收缩vector容量，可以采用v.swap(vector<t>(v))</t></li>
+</ol>
+<h3 id="关于移除vector-deque中的元素"><a href="#关于移除vector-deque中的元素" class="headerlink" title="关于移除vector/deque中的元素"></a>关于移除vector/deque中的元素</h3><ol>
+<li><p>移除所有值为val的元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">coll.erase(remove(coll.begin(),coll.end(),val),</span><br><span class="line">	coll.end());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>移除第一个值为val的元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auto pos = find(coll.begin(),coll.end(),val);</span><br><span class="line">if(pos!=coll.end())</span><br><span class="line">	coll.erase(pos);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="关于下标越界等异常行为"><a href="#关于下标越界等异常行为" class="headerlink" title="关于下标越界等异常行为"></a>关于下标越界等异常行为</h3><ol>
+<li>coll.at(idx)会检查下标越界并抛出out_of_range异常</li>
+<li>除此以外，vector/deque本身不抛出异常。出现异常情况时会导致未定义行为。</li>
+</ol>
+<h3 id="关于vector"><a href="#关于vector" class="headerlink" title="关于vector"></a>关于vector<bool></bool></h3><ol>
+<li>用bit存储每个元素，空间消耗小，时间消耗略高</li>
+<li>支持特殊bit操作<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v.clip(); //将v中所有元素取反</span><br><span class="line">v[idx].flip(); //将v[idx]取反</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="一些不大熟悉的成员函数"><a href="#一些不大熟悉的成员函数" class="headerlink" title="一些不大熟悉的成员函数"></a>一些不大熟悉的成员函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">coll.front();</span><br><span class="line">coll.back(); //返回最后一个元素的引用，不检查是否为空</span><br><span class="line"></span><br><span class="line">Container&lt;T&gt; coll(beg,end); //构造函数，用[beg,end]区间内的元素初始化容器</span><br><span class="line">coll.assign(beg,end);</span><br><span class="line">coll.assign(n,elem);</span><br><span class="line">coll.insert(pos,n,elem);</span><br><span class="line">coll.insert(pos,beg,end);</span><br><span class="line">coll.erase(beg,end);</span><br><span class="line"></span><br><span class="line">//同类型容器间的比较操作（依字典序）</span><br></pre></td></tr></table></figure>
       
 
       
