@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://alfred767569085.github.io">
-  <title>Category: 《C++标准程序库》读书笔记 | Blog of a rookie</title>
+  <title>《C++标准程序库》读书笔记_Containers_List | Blog of a rookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A blog written by a graduate looking for offers">
-<meta name="keywords" content="C++&#x2F;STL&#x2F;Design Patterns">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of a rookie">
-<meta property="og:url" content="https://alfred767569085.github.io/categories/《C-标准程序库》读书笔记/index.html">
+  <meta name="description" content="list的特性 不支持随机存取  不支持 [] 操作符和 at()函数 Bidirectional Iterator，不支持随机访问，对&amp;#60;algorithm&amp;#62;中的一些算法不支持（如 sort()）；与此相对，许多相应的功能可以由list的成员函数实现   快速在任意位置插入/删除元素  不影响其余元素的指针、引用、iterator">
+<meta name="keywords" content="STL,《C++标准程序库》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《C++标准程序库》读书笔记_Containers_List">
+<meta property="og:url" content="https://alfred767569085.github.io/2019/10/01/《C-标准程序库》读书笔记-Containers-List/index.html">
 <meta property="og:site_name" content="Blog of a rookie">
-<meta property="og:description" content="A blog written by a graduate looking for offers">
+<meta property="og:description" content="list的特性 不支持随机存取  不支持 [] 操作符和 at()函数 Bidirectional Iterator，不支持随机访问，对&amp;#60;algorithm&amp;#62;中的一些算法不支持（如 sort()）；与此相对，许多相应的功能可以由list的成员函数实现   快速在任意位置插入/删除元素  不影响其余元素的指针、引用、iterator">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-01T12:50:36.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of a rookie">
-<meta name="twitter:description" content="A blog written by a graduate looking for offers">
+<meta name="twitter:title" content="《C++标准程序库》读书笔记_Containers_List">
+<meta name="twitter:description" content="list的特性 不支持随机存取  不支持 [] 操作符和 at()函数 Bidirectional Iterator，不支持随机访问，对&amp;#60;algorithm&amp;#62;中的一些算法不支持（如 sort()）；与此相对，许多相应的功能可以由list的成员函数实现   快速在任意位置插入/删除元素  不影响其余元素的指针、引用、iterator">
   
     <link rel="alternative" href="/atom.xml" title="Blog of a rookie" type="application/atom+xml">
   
@@ -150,36 +151,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-《C-标准程序库》读书笔记-Containers-List" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      《C++标准程序库》读书笔记_Containers_List
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/01/《C-标准程序库》读书笔记-Containers-List/" class="archive-article-date">
+
+        
+        <a href="/2019/10/01/《C-标准程序库》读书笔记-Containers-List/" class="archive-article-date">
   	<time datetime="2019-10-01T10:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/01/《C-标准程序库》读书笔记-Containers-List/">《C++标准程序库》读书笔记_Containers_List</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="list的特性"><a href="#list的特性" class="headerlink" title="list的特性"></a>list的特性</h3><ul>
+<li><p>不支持随机存取</p>
+<ul>
+<li>不支持 [] 操作符和 at()函数</li>
+<li>Bidirectional Iterator，不支持随机访问，对&#60;algorithm&#62;中的一些算法不支持（如 sort()）；与此相对，许多相应的功能可以由list的成员函数实现</li>
+</ul>
+</li>
+<li><p>快速在任意位置插入/删除元素</p>
+<ul>
+<li>不影响其余元素的指针、引用、iterator</li>
+</ul>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+</li>
+</ul>
+<h3 id="元素的删除"><a href="#元素的删除" class="headerlink" title="元素的删除"></a>元素的删除</h3><ul>
+<li>容器通用方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//删除第一个值为val的元素</span><br><span class="line">auto pos=find(l.begin(),l.end(),val);</span><br><span class="line">if(pos!=l.end())</span><br><span class="line">	l.erase(pos);</span><br><span class="line">//删除所有值为val的元素</span><br><span class="line">l.erase(remove(l.begin(),l.end(),val),l.end());</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>list的成员函数remove()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l.remove(val);</span><br><span class="line">//删除所有值为val的元素，效率高</span><br><span class="line">//注意区分list成员函数remove()和&lt;algorithm&gt;中的remove()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>list的成员函数splice()<ul>
+<li>删除元素只是splice()诸多应用的一种，后面会整理splice()函数的所有重载。这里之所以特意列出来，是因为腾讯面试的时候曾问过相关的问题（如何不用erase()和remove()删除一个list中值为3的元素），<del>当时没回答出来</del></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//删除第一个值为val的元素</span><br><span class="line">auto pos=find(l.begin(),l.end(),val);</span><br><span class="line">if(pos!=l.end())&#123;</span><br><span class="line">	list&lt;T&gt; temp;</span><br><span class="line">   temp.splice(temp.begin(),l,pos);</span><br><span class="line">&#125;</span><br><span class="line">//删除所有值为val的元素</span><br><span class="line">list&lt;T&gt; temp;</span><br><span class="line">temp.splice(temp.begin(),l,remove(l.begin(),l.end(),val),l.end());</span><br></pre></td></tr></table></figure>
+
+<h3 id="list特有的变动性操作（成员函数）"><a href="#list特有的变动性操作（成员函数）" class="headerlink" title="list特有的变动性操作（成员函数）"></a>list特有的变动性操作（成员函数）</h3><ul>
+<li>list因为其任意位置插入/删除元素的优异性能，可以高效的完成许多操作</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">l.remove(val); //删除l中所有值为val的元素</span><br><span class="line">l.remove_if(op); //op为接受一个参数的函数/仿函数</span><br><span class="line"></span><br><span class="line">l.unique(); //移除相邻的重复元素（剩一个）</span><br><span class="line">l.unique(op); //op接受两个参数，若两相邻元素使op(elem1,elem2)==true，则移除后一个元素；移除elem2后从elem1开始继续向后查找</span><br><span class="line">//在表现上，大致有：</span><br><span class="line">l.unique(); 相当于 l.unique([](const T &amp;t1,const T &amp;t2)-&gt;bool&#123;return t1==t2;&#125;);</span><br><span class="line"></span><br><span class="line">l.splice(pos,c); //pos为l中某位置的迭代器，c为与l同型的链表，将c中所有元素移动到l中pos位置（c变为空）</span><br><span class="line">l.splice(pos,c,c_pos); //c_pos为c中某位置迭代器，将c_pos处的元素移动到pos位置；和erase(c_pos);类似，c_pos不能为c.end()</span><br><span class="line">l.splice(pos,c,c_beg,c_end); //把c_beg和c_end区间内的所有元素移动到pos位置；与erase(c_beg,c_end);类似，允许c_beg==c_end(==c.end())，此时不移动任何元素</span><br><span class="line">//splice()中的l和c可以为同一个链表</span><br><span class="line"></span><br><span class="line">l.sort(); //弥补不能使用&lt;algorithm&gt;中的sort()的缺憾</span><br><span class="line">l.sort(op);</span><br><span class="line"></span><br><span class="line">l.merge(c); //需保证l和c都为升序，执行完后，c变为空</span><br><span class="line">l.merge(c,op); //需保证按op规则升序</span><br><span class="line">//l和c可以为同一个链表，当然此时没有作用</span><br><span class="line"></span><br><span class="line">l.reverse(); //将所有元素反序</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,7 +253,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -208,70 +266,104 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://alfred767569085.github.io/2019/10/01/《C-标准程序库》读书笔记-Containers-List/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/30/《C-标准程序库》读书笔记-Containers-Vector-Deque/" class="archive-article-date">
-  	<time datetime="2019-09-30T14:17:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/30/《C-标准程序库》读书笔记-Containers-Vector-Deque/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《C++标准程序库》读书笔记_Containers_Vector/Deque</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/30/《C-标准程序库》读书笔记-Containers-Vector-Deque/">《C++标准程序库》读书笔记_Containers_Vector/Deque</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">《C++标准程序库》</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/《C-标准程序库》读书笔记//" class="article-tag-list-link color5">《C++标准程序库》读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -294,10 +386,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
