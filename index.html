@@ -152,6 +152,231 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-计算机网络-传输层梳理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/03/计算机网络-传输层梳理/">计算机网络_传输层梳理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/03/计算机网络-传输层梳理/" class="archive-article-date">
+  	<time datetime="2019-10-03T09:34:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><ul>
+<li>不同主机的进程间通信</li>
+<li>提供差错检测</li>
+<li>套接字 = （主机IP地址，进程端口号）</li>
+</ul>
+<h2 id="TCP与UDP的特点"><a href="#TCP与UDP的特点" class="headerlink" title="TCP与UDP的特点"></a>TCP与UDP的特点</h2><table>
+<thead>
+<tr>
+<th align="center">aspect</th>
+<th align="center">TCP</th>
+<th align="center">UDP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">连接</td>
+<td align="center">面向连接，有连接控制，一对一</td>
+<td align="center">无连接，一对一、一对多、多对一、多对多</td>
+</tr>
+<tr>
+<td align="center">可靠性</td>
+<td align="center">有确认机制和超时重传机制，可靠交付</td>
+<td align="center">尽力而为，不可靠交付</td>
+</tr>
+<tr>
+<td align="center">拥塞控制</td>
+<td align="center">有拥塞控制机制</td>
+<td align="center">发生网络拥塞时不降低发送速率</td>
+</tr>
+<tr>
+<td align="center">开销与时延</td>
+<td align="center">报文段头部长(20B-60B)，开销大</td>
+<td align="center">头部短(8B)，开销小</td>
+</tr>
+</tbody></table>
+        
+          <a class="article-more-a" href="/2019/10/03/计算机网络-传输层梳理/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/计算机网络//" class="article-tag-list-link color1">计算机网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/03/计算机网络-传输层梳理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-操作系统-进程管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/02/操作系统-进程管理/">操作系统_进程管理梳理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/02/操作系统-进程管理/" class="archive-article-date">
+  	<time datetime="2019-10-02T08:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h1><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><ul>
+<li>动态的程序，实现操作系统的并发</li>
+<li>资源管理的基本单位</li>
+<li>进程控制块（PCB）</li>
+</ul>
+<h2 id="进程的状态切换"><a href="#进程的状态切换" class="headerlink" title="进程的状态切换"></a>进程的状态切换</h2><ul>
+<li>就绪态-&gt;执行态：进程调度选中</li>
+<li>执行态-&gt;阻塞态：请求资源并等待(如，P操作)</li>
+<li>执行态-&gt;就绪态：时间片用完；在抢占式调度中被更高优先级抢占</li>
+<li>阻塞态-&gt;就绪态：等待条件发生被唤醒（如，V操作）</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/10/02/操作系统-进程管理/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/操作系统//" class="article-tag-list-link color5">操作系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/02/操作系统-进程管理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-《C-标准程序库》读书笔记-Containers-List" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -369,9 +594,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="旧的回忆"><a href="#旧的回忆" class="headerlink" title="旧的回忆"></a>旧的回忆</h5><p>时至今日，秋招已经基本接近尾声了。因为博主的后知后觉，不但没有在半年前的春招找日常实习，也没找暑期实习，甚至直到9月份才意识到有秋招这回事。没做准备，就投了猪场和鹅肠，结果面试被问的怀疑人生。之后经过之后一个月的疯狂补习和面试，总算也是有所收获（<del>牺牲大厂的面试刷经验，我服我自己</del>），但还是有点遗憾。</p>
+        <h5><span id="旧的回忆">旧的回忆</span></h5><p>时至今日，秋招已经基本接近尾声了。因为博主的后知后觉，不但没有在半年前的春招找日常实习，也没找暑期实习，甚至直到9月份才意识到有秋招这回事。没做准备，就投了猪场和鹅肠，结果面试被问的怀疑人生。之后经过之后一个月的疯狂补习和面试，总算也是有所收获（<del>牺牲大厂的面试刷经验，我服我自己</del>），但还是有点遗憾。</p>
 <p>秋招是一个激励自己学习的过程，通过面试能发现了自己的很多不足。在下半学期实习之前，想利用这段时间提升下自己。刚好有人推荐开技术博客，于是在他的帮助下，搭建了一个来记录本菜鸡的学习经历，同时激励自己。</p>
-<h5 id="新的开始"><a href="#新的开始" class="headerlink" title="新的开始"></a>新的开始</h5><p>博主主要面试的是游戏研发，offer也都是这方面的。未来半年，针对自己的弱项和面试需求，大概列出了这样一份学习计划，希望能够完成。</p>
+<h5><span id="新的开始">新的开始</span></h5><p>博主主要面试的是游戏研发，offer也都是这方面的。未来半年，针对自己的弱项和面试需求，大概列出了这样一份学习计划，希望能够完成。</p>
 <ul>
 <li>复习巩固算法与数据结构、操作系统、计算机网络</li>
 <li>在实践中复习理解C++面向对象相关特性</li>
@@ -604,11 +829,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
             
             <div class="clearfix"></div>

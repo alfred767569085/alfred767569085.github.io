@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://alfred767569085.github.io">
-  <title>Archives: 2019/10 | Blog of a rookie</title>
+  <title>操作系统_进程管理梳理 | Blog of a rookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A blog written by a graduate looking for offers">
-<meta name="keywords" content="C++&#x2F;STL&#x2F;Design Patterns">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of a rookie">
-<meta property="og:url" content="https://alfred767569085.github.io/archives/2019/10/index.html">
+  <meta name="description" content="进程与线程进程 动态的程序，实现操作系统的并发 资源管理的基本单位 进程控制块（PCB）  进程的状态切换 就绪态-&amp;gt;执行态：进程调度选中 执行态-&amp;gt;阻塞态：请求资源并等待(如，P操作) 执行态-&amp;gt;就绪态：时间片用完；在抢占式调度中被更高优先级抢占 阻塞态-&amp;gt;就绪态：等待条件发生被唤醒（如，V操作）">
+<meta name="keywords" content="面试,操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统_进程管理梳理">
+<meta property="og:url" content="https://alfred767569085.github.io/2019/10/02/操作系统-进程管理/index.html">
 <meta property="og:site_name" content="Blog of a rookie">
-<meta property="og:description" content="A blog written by a graduate looking for offers">
+<meta property="og:description" content="进程与线程进程 动态的程序，实现操作系统的并发 资源管理的基本单位 进程控制块（PCB）  进程的状态切换 就绪态-&amp;gt;执行态：进程调度选中 执行态-&amp;gt;阻塞态：请求资源并等待(如，P操作) 执行态-&amp;gt;就绪态：时间片用完；在抢占式调度中被更高优先级抢占 阻塞态-&amp;gt;就绪态：等待条件发生被唤醒（如，V操作）">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://alfred767569085.github.io/images/pasted-6.png">
+<meta property="og:updated_time" content="2019-10-02T11:00:20.563Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of a rookie">
-<meta name="twitter:description" content="A blog written by a graduate looking for offers">
+<meta name="twitter:title" content="操作系统_进程管理梳理">
+<meta name="twitter:description" content="进程与线程进程 动态的程序，实现操作系统的并发 资源管理的基本单位 进程控制块（PCB）  进程的状态切换 就绪态-&amp;gt;执行态：进程调度选中 执行态-&amp;gt;阻塞态：请求资源并等待(如，P操作) 执行态-&amp;gt;就绪态：时间片用完；在抢占式调度中被更高优先级抢占 阻塞态-&amp;gt;就绪态：等待条件发生被唤醒（如，V操作）">
+<meta name="twitter:image" content="https://alfred767569085.github.io/images/pasted-6.png">
   
     <link rel="alternative" href="/atom.xml" title="Blog of a rookie" type="application/atom+xml">
   
@@ -150,89 +153,261 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-操作系统-进程管理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/03/计算机网络-传输层梳理/" class="archive-article-date">
-  	<time datetime="2019-10-03T09:34:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/03/计算机网络-传输层梳理/">计算机网络_传输层梳理</a>
+    <h1 class="article-title" itemprop="name">
+      操作系统_进程管理梳理
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机网络</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/计算机网络//" class="article-tag-list-link color1">计算机网络</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/02/操作系统-进程管理/" class="archive-article-date">
+        
+        <a href="/2019/10/02/操作系统-进程管理/" class="archive-article-date">
   	<time datetime="2019-10-02T08:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/02/操作系统-进程管理/">操作系统_进程管理梳理</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1><span id="进程与线程">进程与线程</span></h1><h2><span id="进程">进程</span></h2><ul>
+<li>动态的程序，实现操作系统的并发</li>
+<li>资源管理的基本单位</li>
+<li>进程控制块（PCB）</li>
+</ul>
+<h2><span id="进程的状态切换">进程的状态切换</span></h2><ul>
+<li>就绪态-&gt;执行态：进程调度选中</li>
+<li>执行态-&gt;阻塞态：请求资源并等待(如，P操作)</li>
+<li>执行态-&gt;就绪态：时间片用完；在抢占式调度中被更高优先级抢占</li>
+<li>阻塞态-&gt;就绪态：等待条件发生被唤醒（如，V操作）</li>
+</ul>
+<a id="more"></a>
+<p><img src="/images/pasted-6.png" alt="upload successful"><br><em>简单的进程状态切换示意图（图片来自网络）</em></p>
+<h2><span id="线程">线程</span></h2><ul>
+<li>独立执行/被调度的基本单位</li>
+<li>内核级线程vs用户级线程</li>
+<li>占有少量资源（程序计数器PC，一组寄存器，堆栈）</li>
+<li>隶属于同一进程的所有线程共享该进程的系统资源<ul>
+<li>代码段（代码、常量）</li>
+<li>数据段（全局变量、静态变量）</li>
+</ul>
+</li>
+</ul>
+<h2><span id="进程通信">进程通信</span></h2><ul>
+<li>管道<ul>
+<li>父子进程</li>
+</ul>
+</li>
+<li>信号量（系统IPC）<ul>
+<li>进程/线程之间的同步机制</li>
+<li>互斥访问临劫资源</li>
+</ul>
+</li>
+<li>消息队列（系统IPC）</li>
+<li>共享内存（系统IPC）<ul>
+<li>映射一块能被其他进程访问的内存</li>
+<li>最快的IPC方式，运行效率高</li>
+<li>常和信号量配套使用（命名信号量）</li>
+</ul>
+</li>
+<li>套接字<ul>
+<li>亦可用于设备间通信</li>
+</ul>
+</li>
+</ul>
+<h2><span id="线程通信">线程通信</span></h2><ul>
+<li>线程通信的目的主要是实现线程间的同步 &amp; 互斥地访问临界资源；而进程通信还需要数据交换</li>
+<li>锁机制<ul>
+<li>互斥锁</li>
+<li>条件变量</li>
+<li>读写锁</li>
+</ul>
+</li>
+<li>信号量</li>
+</ul>
+<h2><span id="进程与线程的比较">进程与线程的比较</span></h2><ul>
+<li>进程是拥有资源的基本单位（本质区别）<ul>
+<li>每个进程有自己的地址空间</li>
+<li>同一进程的线程共享地址空间</li>
+</ul>
+</li>
+<li>线程是独立调度的基本单位</li>
+<li>进程崩溃不影响其他进程；线程崩溃，其他同组线程也死掉</li>
+<li>线程的开销小，产生、切换快，通讯快，资源利用率好</li>
+<li>线程访问共享的全局变量需要互斥机制</li>
+</ul>
+<h1><span id="进程调度">进程调度</span></h1><h2><span id="三级调度模型">三级调度模型</span></h2><ul>
+<li>高级调度（作业调度）</li>
+<li>中级调度（进程：内存&lt;-&gt;外存）</li>
+<li>低级调度（进程调度）</li>
+</ul>
+<h2><span id="性能指标">性能指标</span></h2><ul>
+<li>CPU利用率</li>
+<li>系统吞吐量</li>
+<li>响应时间</li>
+<li>周转时间<ul>
+<li>周转时间 = 完成时间 - 提交时间 = 等待时间 + 运行时间</li>
+<li>平均周转时间</li>
+<li>带权周转时间 = 周转时间 / 运行时间</li>
+</ul>
+</li>
+</ul>
+<h2><span id="调度算法">调度算法</span></h2><ul>
+<li>FCFS（先来先服务）<ul>
+<li>非抢占式</li>
+<li>长作业有利（CPU频繁型）</li>
+</ul>
+</li>
+<li>SJF（短作业优先）<ul>
+<li>一般为非抢占式（可抢占）</li>
+<li>短作业有利（IO频繁型）</li>
+<li>容易产生饥饿</li>
+</ul>
+</li>
+<li>优先级调度算法<ul>
+<li>抢占式/非抢占式</li>
+<li>静态优先级/动态优先级</li>
+<li>高响应比优先调度算法（动态，响应比 = (等待时间+估计运行时间)/估计运行时间，短作业有利，兼顾长作业）</li>
+</ul>
+</li>
+<li>时间片轮转调度算法<ul>
+<li>抢占式</li>
+<li>确定时间片大小（太长则劣化为FCFS）</li>
+</ul>
+</li>
+<li>多级反馈队列调度算法<ul>
+<li>抢占式</li>
+<li>时间片 + 优先级</li>
+</ul>
+</li>
+</ul>
+<h1><span id="同步与互斥">同步与互斥</span></h1><ul>
+<li>分析并发的进程(线程)间的同步关系，设置信号量</li>
+<li>分析临界资源，设置互斥锁</li>
+</ul>
+<h2><span id="同步">同步</span></h2><ul>
+<li>进程(线程)&lt;-&gt;进程(线程)，多为不同类进程(线程)</li>
+</ul>
+<h2><span id="互斥">互斥</span></h2><ul>
+<li>进程(线程)&lt;-&gt;临界资源&lt;-&gt;进程(线程)</li>
+<li>互斥的要求<ul>
+<li>闲则让进</li>
+<li>忙则等待</li>
+<li>有限等待</li>
+<li>让权等待</li>
+</ul>
+</li>
+</ul>
+<h2><span id="信号量">信号量</span></h2><ul>
+<li>无名信号量<ul>
+<li>只用于共享的地址空间，线程间通信</li>
+</ul>
+</li>
+<li>命名信号量</li>
+<li>val设为1时-&gt;互斥锁</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">struct sem_t &#123;</span><br><span class="line">	unsignd int count;</span><br><span class="line">   queueType q;</span><br><span class="line">&#125;; //伪码</span><br><span class="line"></span><br><span class="line">int sem_init(sem_t sem*, int pshared, unsigned int value);</span><br><span class="line">//pshared == 0 ：局部（无名）信号量</span><br><span class="line"></span><br><span class="line">int sem_wait(sem_t sem*);</span><br><span class="line">//P操作</span><br><span class="line"></span><br><span class="line">int sem_post(sem_t sem*);</span><br><span class="line">//V操作，signal</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h2><span id="锁">锁</span></h2><ul>
+<li><p>互斥锁</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pthread_mutex_lock</span><br><span class="line">pthread_mutex_unlock</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>条件变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pthread_cond_wait</span><br><span class="line">pthread_cond_signal</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>读写锁</p>
+<ul>
+<li>写者优先，适用于读操作远多于写操作时</li>
+<li>只有一个进程能获取写锁，并阻塞其他所有读写操作</li>
+<li>允许多个线程同时读</li>
+</ul>
+</li>
+</ul>
+<h1><span id="死锁">死锁</span></h1><h2><span id="死锁产生的必要条件">死锁产生的必要条件</span></h2><ul>
+<li>互斥条件<ul>
+<li>申请临界资源，要求互斥访问</li>
+</ul>
+</li>
+<li>不剥夺条件<ul>
+<li>进程获得的资源只能由自己释放</li>
+</ul>
+</li>
+<li>请求和保持条件<ul>
+<li>先申请一部分资源，再申请另一部分</li>
+</ul>
+</li>
+<li>环路等待条件<ul>
+<li>存在资源申请的环路</li>
+</ul>
+</li>
+</ul>
+<h2><span id="鸵鸟算法">鸵鸟算法</span></h2><h2><span id="死锁的预防">死锁的预防</span></h2><ul>
+<li>破坏产生死锁的某个必要条件</li>
+<li>破坏不剥夺条件<ul>
+<li>降低系统吞吐量</li>
+</ul>
+</li>
+<li>破坏请求与保持条件<ul>
+<li>降低资源利用率</li>
+</ul>
+</li>
+<li>破坏环路等待条件<ul>
+<li>资源编号，进程按序号有序申请</li>
+<li>增加编程复杂性</li>
+</ul>
+</li>
+</ul>
+<h2><span id="死锁的避免">死锁的避免</span></h2><ul>
+<li>在进程申请资源后，计算分配后的状态，决定是否分配<ul>
+<li>安全状态：存在安全序列，一定不会死锁</li>
+<li>不安全状态：不存在安全序列，可能死锁</li>
+</ul>
+</li>
+<li>银行家算法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//进程数量：n；资源种类：m</span><br><span class="line">available[m];</span><br><span class="line">max[n][m];</span><br><span class="line">allocation[n][m];</span><br><span class="line">need[n][m];</span><br><span class="line"></span><br><span class="line">request_pid;</span><br><span class="line">request[m];</span><br><span class="line"></span><br><span class="line">check</span><br><span class="line">	request[i]&lt;=need[i];</span><br><span class="line">   request[i]&lt;=available;</span><br><span class="line">   </span><br><span class="line">search a safe sequence;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="死锁的检测与消除">死锁的检测与消除</span></h2><ul>
+<li>资源分配图</li>
+<li>死锁消除<ul>
+<li>剥夺资源</li>
+<li>撤销进程</li>
+<li>进程回退</li>
+</ul>
+</li>
+</ul>
+<h1><span id="饥饿">饥饿</span></h1>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -248,7 +423,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -261,70 +436,126 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://alfred767569085.github.io/2019/10/02/操作系统-进程管理/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/01/《C-标准程序库》读书笔记-Containers-List/" class="archive-article-date">
-  	<time datetime="2019-10-01T10:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/10/03/计算机网络-传输层梳理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          计算机网络_传输层梳理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/01/《C-标准程序库》读书笔记-Containers-List/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《C++标准程序库》读书笔记_Containers_List</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/01/《C-标准程序库》读书笔记-Containers-List/">《C++标准程序库》读书笔记_Containers_List</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">《C++标准程序库》</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/《C-标准程序库》读书笔记//" class="article-tag-list-link color5">《C++标准程序库》读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">进程与线程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.1.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.2.</span> <span class="toc-text">进程的状态切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.3.</span> <span class="toc-text">线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.4.</span> <span class="toc-text">进程通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.5.</span> <span class="toc-text">线程通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.6.</span> <span class="toc-text">进程与线程的比较</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">进程调度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.1.</span> <span class="toc-text">三级调度模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.2.</span> <span class="toc-text">性能指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.3.</span> <span class="toc-text">调度算法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">同步与互斥</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.1.</span> <span class="toc-text">同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.2.</span> <span class="toc-text">互斥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.3.</span> <span class="toc-text">信号量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.4.</span> <span class="toc-text">锁</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.1.</span> <span class="toc-text">死锁产生的必要条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.2.</span> <span class="toc-text">鸵鸟算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.3.</span> <span class="toc-text">死锁的预防</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.4.</span> <span class="toc-text">死锁的避免</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.5.</span> <span class="toc-text">死锁的检测与消除</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">饥饿</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -347,8 +578,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
