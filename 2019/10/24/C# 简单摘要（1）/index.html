@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://alfred767569085.github.io">
-  <title>Category: 设计模式 | Blog of a rookie</title>
+  <title>C# 简单摘要（1） | Blog of a rookie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A blog written by a graduate looking for offers">
-<meta name="keywords" content="C++&#x2F;STL&#x2F;Design Patterns">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of a rookie">
-<meta property="og:url" content="https://alfred767569085.github.io/categories/设计模式/index.html">
+  <meta name="description" content="INTRO C#是.NET平台下一门面向对象的编程语言，在unity开发中有重要应用 本文在有C和C++的基础上快速浏览C#的知识点，对一些概念做简单摘要 主要包括一些基础内容  程序结构123456789101112using System; //使用的命名空间namespace HelloWorldApplication //命名空间声明&amp;#123;   class HelloWorld //">
+<meta name="keywords" content="C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C# 简单摘要（1）">
+<meta property="og:url" content="https://alfred767569085.github.io/2019/10/24/C# 简单摘要（1）/index.html">
 <meta property="og:site_name" content="Blog of a rookie">
-<meta property="og:description" content="A blog written by a graduate looking for offers">
+<meta property="og:description" content="INTRO C#是.NET平台下一门面向对象的编程语言，在unity开发中有重要应用 本文在有C和C++的基础上快速浏览C#的知识点，对一些概念做简单摘要 主要包括一些基础内容  程序结构123456789101112using System; //使用的命名空间namespace HelloWorldApplication //命名空间声明&amp;#123;   class HelloWorld //">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-24T11:53:40.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of a rookie">
-<meta name="twitter:description" content="A blog written by a graduate looking for offers">
+<meta name="twitter:title" content="C# 简单摘要（1）">
+<meta name="twitter:description" content="INTRO C#是.NET平台下一门面向对象的编程语言，在unity开发中有重要应用 本文在有C和C++的基础上快速浏览C#的知识点，对一些概念做简单摘要 主要包括一些基础内容  程序结构123456789101112using System; //使用的命名空间namespace HelloWorldApplication //命名空间声明&amp;#123;   class HelloWorld //">
   
     <link rel="alternative" href="/atom.xml" title="Blog of a rookie" type="application/atom+xml">
   
@@ -150,71 +151,602 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-C# 简单摘要（1）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/05/设计模式-单例模式/" class="archive-article-date">
-  	<time datetime="2019-10-05T04:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/05/设计模式-单例模式/">设计模式_单例模式</a>
+    <h1 class="article-title" itemprop="name">
+      C# 简单摘要（1）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/24/C# 简单摘要（1）/" class="archive-article-date">
+  	<time datetime="2019-10-24T08:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2><span id="intro">INTRO</span></h2><ul>
+<li>C#是.NET平台下一门面向对象的编程语言，在unity开发中有重要应用</li>
+<li>本文在有C和C++的基础上快速浏览C#的知识点，对一些概念做简单摘要</li>
+<li>主要包括一些基础内容</li>
+</ul>
+<h2><span id="程序结构">程序结构</span></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">using System; //使用的命名空间</span><br><span class="line">namespace HelloWorldApplication //命名空间声明</span><br><span class="line">&#123;</span><br><span class="line">   class HelloWorld //若干个class</span><br><span class="line">   &#123;</span><br><span class="line">      static void Main(string[] args) //一个main方法</span><br><span class="line">      &#123;</span><br><span class="line">         Console.WriteLine(&quot;Hello World&quot;);</span><br><span class="line">         Console.ReadKey();</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2><span id="基本语法">基本语法</span></h2><ul>
+<li>声明成员变量和成员函数<ul>
+<li>默认访问控制为private</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// C#</span><br><span class="line">&lt;Access Specifier&gt; &lt;Val Type&gt; &lt;Val Name&gt;;</span><br><span class="line">&lt;Access Specifier&gt; &lt;Return Type&gt; &lt;Method Name&gt;(Parameter List)</span><br><span class="line">&#123;</span><br><span class="line">   Method Body</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// C++</span><br><span class="line">&lt;Access Specifier&gt;:</span><br><span class="line">&lt;Val Type&gt; &lt;Val Name&gt;;</span><br><span class="line">&lt;Return Type&gt; &lt;Method Name&gt;(Parameter List)</span><br><span class="line">&#123;</span><br><span class="line">   Method Body</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="数据类型">数据类型</span></h2><p>值类型、引用类型、指针类型</p>
+<h4><span id="值类型">值类型</span></h4><ul>
+<li>局部变量和方法参数分配于线程栈，不受垃圾回收控制</li>
+<li>内置值类型：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Description</th>
+<th align="center">Default Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">bool</td>
+<td align="center"></td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center"><strong>byte</strong></td>
+<td align="center"><strong>8位无符号整数</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>sbyte</strong></td>
+<td align="center"><strong>8位有符号整数</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center"></td>
+<td align="center">‘’</td>
+</tr>
+<tr>
+<td align="center"><strong>decimal</strong></td>
+<td align="center"><strong>128位浮点型（28-29位十进制有效数字）</strong></td>
+<td align="center"><strong>0.0M</strong></td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center"></td>
+<td align="center">0.0D</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center"></td>
+<td align="center">0.0F</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center"></td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center"><strong>long</strong></td>
+<td align="center"><strong>64位有符号整数（相当于C++中的long long int）</strong></td>
+<td align="center"><strong>0L</strong></td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">16位有符号整数</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center"><strong>uint</strong></td>
+<td align="center"><strong>相当于C++中的unsigned int</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>ulong</strong></td>
+<td align="center"><strong>相当于C++中的unsigned long</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>ushort</strong></td>
+<td align="center"><strong>相当于C++中的unsigned short</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<h4><span id="可空类型nullable">可空类型（Nullable）</span></h4><ul>
+<li>在原来的赋值范围之外加上null值</li>
+<li>null声明运算符：?</li>
+<li>null合并运算符：??</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//声明可空类型</span><br><span class="line">&lt;data_type&gt; ? &lt;variable_name&gt; = null;</span><br><span class="line">int? num1 = null;</span><br><span class="line">int? num2 = 3;</span><br><span class="line">int? num3 = new int?();</span><br><span class="line"></span><br><span class="line">//null合并运算符</span><br><span class="line">int num4 = num1 ?? 3; //若操作数一的值为null，返回操作数二的值</span><br><span class="line">num4 = num2 ?? 3; //操作数一的值不为null则返回操作数二的值</span><br></pre></td></tr></table></figure>
+
+<h4><span id="数组">数组</span></h4><ul>
+<li>数组是一个引用类型</li>
+<li>数组的声明与初始化</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">datatype[] arrayName;</span><br><span class="line">//例：</span><br><span class="line">int[] demo;</span><br><span class="line">int[] demo = new int[9];</span><br><span class="line">int[] demo = &#123;1,2,3&#125;;</span><br><span class="line">int[] demo = new int[]&#123;1,2,3&#125;;</span><br><span class="line">int[] demo2 = demo;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>foreach语句</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int[] demo = new int[9];</span><br><span class="line">foreach(int i in demo) &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>多维数组</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//声明与初始化</span><br><span class="line">int[,] demo; //二维int数组</span><br><span class="line">double[,,] demo; //三维double数组</span><br><span class="line">int[,] demo = new int[2,3]&#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;&#125;;</span><br><span class="line"></span><br><span class="line">//元素访问</span><br><span class="line">int val = demo[1,2];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>交错数组<ul>
+<li>允许内部结构不一致的多维数组</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//demo由两个数组组成，第一个数组长度为2，第二个数组长度为4</span><br><span class="line">int[][] demo = new int[2][]&#123;&#123;1,2&#125;,&#123;3,4,5,6&#125;&#125;;</span><br><span class="line">int val = demo[1][3];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参数数组<ul>
+<li>当不确定方法的参数个数时可以使用参数数组</li>
+<li>param关键字</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">public int demo(param int[] args) &#123;...&#125; //方法定义</span><br><span class="line">...</span><br><span class="line">int val = demo(2,5,78,12); //方法调用</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Array类<ul>
+<li>Array类是所有数组类型的基类</li>
+<li>Array类常用方法：</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>IsFixedSize</strong></td>
+<td align="center">获取一个值，该值指示数组是否带有固定大小</td>
+</tr>
+<tr>
+<td align="center"><strong>IsReadOnly</strong></td>
+<td align="center">获取一个值，该值指示数组是否只读</td>
+</tr>
+<tr>
+<td align="center"><strong>Length</strong></td>
+<td align="center">获取一个 32 位整数，该值表示所有维度的数组中的元素总数</td>
+</tr>
+<tr>
+<td align="center"><strong>LongLength</strong></td>
+<td align="center">获取一个 64 位整数，该值表示所有维度的数组中的元素总数</td>
+</tr>
+<tr>
+<td align="center"><strong>Rank</strong></td>
+<td align="center">获取数组的秩（维度）</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center"><strong>Clear</strong></td>
+<td align="center">根据元素的类型，设置数组中某个范围的元素为零、为 false 或者为 null</td>
+</tr>
+<tr>
+<td align="center"><strong>Copy(Array, Array, Int32)</strong></td>
+<td align="center">从数组的第一个元素开始复制某个范围的元素到另一个数组的第一个元素位置。长度由一个 32 位整数指定</td>
+</tr>
+<tr>
+<td align="center"><strong>CopyTo(Array, Int32)</strong></td>
+<td align="center">从当前的一维数组中复制所有的元素到一个指定的一维数组的指定索引位置。索引由一个 32 位整数指定</td>
+</tr>
+<tr>
+<td align="center"><strong>GetLength</strong></td>
+<td align="center">获取一个 32 位整数，该值表示指定维度的数组中的元素总数</td>
+</tr>
+<tr>
+<td align="center"><strong>GetLongLength</strong></td>
+<td align="center">获取一个 64 位整数，该值表示指定维度的数组中的元素总数</td>
+</tr>
+<tr>
+<td align="center"><strong>GetLowerBound</strong></td>
+<td align="center">获取数组中指定维度的下界</td>
+</tr>
+<tr>
+<td align="center"><strong>GetType</strong></td>
+<td align="center">获取当前实例的类型，从对象（Object）继承</td>
+</tr>
+<tr>
+<td align="center"><strong>GetUpperBound</strong></td>
+<td align="center">获取数组中指定维度的上界</td>
+</tr>
+<tr>
+<td align="center"><strong>GetValue(Int32)</strong></td>
+<td align="center">获取一维数组中指定位置的值，索引由一个 32 位整数指定</td>
+</tr>
+<tr>
+<td align="center"><strong>IndexOf(Array, Object)</strong></td>
+<td align="center">搜索指定的对象，返回整个一维数组中第一次出现的索引</td>
+</tr>
+<tr>
+<td align="center"><strong>Reverse(Array)</strong></td>
+<td align="center">逆转整个一维数组中元素的顺序</td>
+</tr>
+<tr>
+<td align="center"><strong>SetValue(Object, Int32)</strong></td>
+<td align="center">给一维数组中指定位置的元素设置值，索引由一个 32 位整数指定</td>
+</tr>
+<tr>
+<td align="center"><strong>Sort(Array)</strong></td>
+<td align="center">使用数组的每个元素的 IComparable 实现来排序整个一维数组中的元素</td>
+</tr>
+<tr>
+<td align="center"><strong>ToString</strong></td>
+<td align="center">返回一个表示当前对象的字符串，从对象（Object）继承</td>
+</tr>
+</tbody></table>
+<h4><span id="string类型">string类型</span></h4><ul>
+<li>System.String类的别名</li>
+<li>常用方法略</li>
+</ul>
+<h4><span id="结构类型struct">结构类型（struct）</span></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct demo &#123;</span><br><span class="line">	public int a1;</span><br><span class="line">	public int a2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>与C++中的结构的区别</p>
+<ul>
+<li>可带有方法、字段、索引、属性、运算符方法和事件。</li>
+<li>结构可定义构造函数，但不能定义析构函数。不能为结构定义默认的构造函数。默认的构造函数是自动定义的，且不能被改变。</li>
+<li>不能继承其他的结构或类。</li>
+<li>不能作为其他结构或类的基础结构。</li>
+<li>可实现一个或多个接口。</li>
+<li>结构成员不能指定为 abstract、virtual 或 protected。</li>
+<li>结构可以不使用 New 操作符即可被实例化：如果不使用 New 操作符，只有在所有的字段都被初始化之后，字段才被赋值，对象才被使用。</li>
+</ul>
+</li>
+<li><p>C#中类与结构的区别</p>
+<ul>
+<li>类是引用类型，结构是值类型。</li>
+<li>结构不支持继承。</li>
+<li>结构不能声明默认的构造函数。</li>
+</ul>
+</li>
+</ul>
+<h4><span id="枚举类型">枚举类型</span></h4><ul>
+<li>同C++</li>
+</ul>
+<h4><span id="引用类型">引用类型</span></h4><ul>
+<li>引用类型分配于托管堆</li>
+<li>所有的类和接口都是引用类型</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class somRef &#123;</span><br><span class="line"> public int x;</span><br><span class="line">&#125;</span><br><span class="line">struct somVal &#123;</span><br><span class="line"> public int x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class test &#123;</span><br><span class="line">	static void demo() &#123;</span><br><span class="line">   somRef sr = new somRef(); //引用类型，在堆上分配</span><br><span class="line">   somVal sv = new somVal(); //值类型，在栈上分配</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>装箱 &amp;&amp; 拆箱<ul>
+<li>装箱：将值类型转换为引用类型</li>
+<li>[1] 在托管堆中分配内存：值类型大小+类型对象指针+同步块索引</li>
+<li>[2] 复制字段</li>
+<li>[3] 返回引用</li>
+<li>拆箱：将已装箱的值类型（引用类型）转换为值类型</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i = 5;</span><br><span class="line">object o = i; //装箱</span><br><span class="line">int j = (int)o; //拆箱</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>何时自动对值类型进行装箱操作？<ul>
+<li>使用非泛型集合时</li>
+<li>调用object类的非虚方法/未重写的虚方法</li>
+<li>将值类型转换为接口类型</li>
+</ul>
+</li>
+<li>如何选择类与结构体？<ul>
+<li>结构体是一种特殊的值类型，拥有值类型所以的特权（实例一般分配在线程栈上）和限制（不能被派生，所以没有 abstract 和 sealed，未装箱的实例不能进行线程同步的访问）</li>
+<li>当面对一下情况时，选择结构体：</li>
+<li>[1] 类型具有基元类型的行为</li>
+<li>[2] 类型不需要从其它任何类型继承</li>
+<li>[3] 类型也不会派生出任何其它类型</li>
+<li>[4] 类型的实例较小（约为16字节或者更小）</li>
+<li>[5] 类型的实例较大，但是不作为方法的参数传递，也不作为方法的返回值。</li>
+</ul>
+</li>
+</ul>
+<h2><span id="类型转换">类型转换</span></h2><ul>
+<li>隐式类型转换</li>
+<li>显示类型转换</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ToBoolean</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToByte</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToChar</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>ToDateTime</strong></td>
+<td align="center">转换成 日期-时间 结构</td>
+</tr>
+<tr>
+<td align="center">ToDecimal</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToDouble</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToInt16</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToInt32</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToInt64</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToSbyte</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>ToSingle</strong></td>
+<td align="center">转换成小浮点数类型</td>
+</tr>
+<tr>
+<td align="center">ToString</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>ToType</strong></td>
+<td align="center">转换成指定类型</td>
+</tr>
+<tr>
+<td align="center">ToUInt16</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToUInt32</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">ToUInt64</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h2><span id="封装">封装</span></h2><ul>
+<li>在类成员前添加访问修饰符，默认为private</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">访问修饰符</th>
+<th align="center">范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">pubilc</td>
+<td align="center">任何公有成员可以被外部的类访问</td>
+</tr>
+<tr>
+<td align="center">private</td>
+<td align="center">只有同一个类中的函数可以访问它的私有成员</td>
+</tr>
+<tr>
+<td align="center">protected</td>
+<td align="center">该类内部和继承类中可以访问</td>
+</tr>
+<tr>
+<td align="center">internal</td>
+<td align="center">同一个程序集的对象可以访问</td>
+</tr>
+<tr>
+<td align="center">protected internal</td>
+<td align="center">protected 和 internal 的并集，符合任意一条都可以访问</td>
+</tr>
+</tbody></table>
+<h2><span id="方法">方法</span></h2><ul>
+<li><p>参数传递</p>
+<ul>
+<li>值参数</li>
+<li>引用参数</li>
+<li>输出参数（相当于可以不初始化的引用参数）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class test &#123;</span><br><span class="line">	public void test_v(int x) &#123;&#125;</span><br><span class="line">	public void test_r(ref int x) &#123;&#125;</span><br><span class="line">	public void test_o(out int x) &#123;&#125;</span><br><span class="line">  </span><br><span class="line">	static void demo() &#123;</span><br><span class="line">		int a = 0;</span><br><span class="line">		test_v(a);</span><br><span class="line">		test_r(ref a);</span><br><span class="line">		test_o(out a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/设计模式//" class="article-tag-list-link color5">设计模式</a>
+        			<a href="/categories/C//" class="article-tag-list-link color3">C#</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://alfred767569085.github.io/2019/10/24/C# 简单摘要（1）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/10/23/unity基础梳理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">unity基础梳理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">INTRO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">程序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.1.</span> <span class="toc-text">值类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.2.</span> <span class="toc-text">可空类型（Nullable）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.4.</span> <span class="toc-text">string类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.5.</span> <span class="toc-text">结构类型（struct）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.6.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.7.</span> <span class="toc-text">引用类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">6.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">7.</span> <span class="toc-text">方法</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -237,10 +769,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
 		root: "/",
