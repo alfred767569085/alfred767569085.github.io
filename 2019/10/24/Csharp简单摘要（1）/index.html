@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Blog of a rookie">
 <meta property="og:description" content="INTRO C#是.NET平台下一门面向对象的编程语言，在unity开发中有重要应用 本文在有C和C++的基础上快速浏览C#的知识点，对一些概念做简单摘要 主要包括一些基础内容  程序结构123456789101112using System; //使用的命名空间namespace HelloWorldApplication //命名空间声明&amp;#123;   class HelloWorld //">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-24T11:53:40.858Z">
+<meta property="og:updated_time" content="2019-10-24T12:03:34.944Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C# 简单摘要（1）">
 <meta name="twitter:description" content="INTRO C#是.NET平台下一门面向对象的编程语言，在unity开发中有重要应用 本文在有C和C++的基础上快速浏览C#的知识点，对一些概念做简单摘要 主要包括一些基础内容  程序结构123456789101112using System; //使用的命名空间namespace HelloWorldApplication //命名空间声明&amp;#123;   class HelloWorld //">
@@ -437,15 +437,14 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class somRef &#123;</span><br><span class="line"> public int x;</span><br><span class="line">&#125;</span><br><span class="line">struct somVal &#123;</span><br><span class="line"> public int x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class test &#123;</span><br><span class="line">	static void demo() &#123;</span><br><span class="line">   somRef sr = new somRef(); //引用类型，在堆上分配</span><br><span class="line">   somVal sv = new somVal(); //值类型，在栈上分配</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>装箱 &amp;&amp; 拆箱<ul>
-<li>装箱：将值类型转换为引用类型</li>
+<h4><span id="装箱-ampamp-拆箱">装箱 &amp;&amp; 拆箱</span></h4><ul>
+<li>装箱：将值类型转换为引用类型<ul>
 <li>[1] 在托管堆中分配内存：值类型大小+类型对象指针+同步块索引</li>
 <li>[2] 复制字段</li>
 <li>[3] 返回引用</li>
-<li>拆箱：将已装箱的值类型（引用类型）转换为值类型</li>
 </ul>
 </li>
+<li>拆箱：将已装箱的值类型（引用类型）转换为值类型</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int i = 5;</span><br><span class="line">object o = i; //装箱</span><br><span class="line">int j = (int)o; //拆箱</span><br></pre></td></tr></table></figure>
 
@@ -727,7 +726,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">INTRO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">程序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.1.</span> <span class="toc-text">值类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.2.</span> <span class="toc-text">可空类型（Nullable）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.4.</span> <span class="toc-text">string类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.5.</span> <span class="toc-text">结构类型（struct）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.6.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.7.</span> <span class="toc-text">引用类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">6.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">7.</span> <span class="toc-text">方法</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">INTRO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">程序结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">4.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.1.</span> <span class="toc-text">值类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.2.</span> <span class="toc-text">可空类型（Nullable）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.4.</span> <span class="toc-text">string类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.5.</span> <span class="toc-text">结构类型（struct）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.6.</span> <span class="toc-text">枚举类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.7.</span> <span class="toc-text">引用类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">4.0.8.</span> <span class="toc-text">装箱 &amp;&amp; 拆箱</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">5.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">6.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">7.</span> <span class="toc-text">方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -843,7 +842,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -855,19 +858,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>
